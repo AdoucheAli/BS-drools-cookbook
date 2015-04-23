@@ -25,22 +25,18 @@ public class TechniciansSolution implements Solution<SimpleScore> {
     private TechniciansSolution() {
     }
 
-    @Override
     public SimpleScore getScore() {
         return score;
     }
 
-    @Override
     public void setScore(SimpleScore score) {
         this.score = (SimpleScore) score;
     }
 
-    @Override
-    public Collection<Technician> getProblemFacts() {
+     public Collection<Technician> getProblemFacts() {
         return technicians;
     }
 
-    @Override
     public Solution<SimpleScore> cloneSolution() {
         TechniciansSolution solution = new TechniciansSolution();
         solution.score = score;
