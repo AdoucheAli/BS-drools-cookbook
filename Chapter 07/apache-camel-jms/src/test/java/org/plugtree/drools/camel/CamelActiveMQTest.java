@@ -42,7 +42,7 @@ public class CamelActiveMQTest {
         FireAllRulesCommand fireAllRulesCommand = (FireAllRulesCommand) CommandFactory
                 .newFireAllRules("executed-rules");
 
-        List<Command> commands = new ArrayList<Command>();
+		List<Command> commands = new ArrayList<Command>();
         commands.add(insertServerCommand);
         commands.add(insertBadServerCommand);
         commands.add(insertVirtualizationCommand);

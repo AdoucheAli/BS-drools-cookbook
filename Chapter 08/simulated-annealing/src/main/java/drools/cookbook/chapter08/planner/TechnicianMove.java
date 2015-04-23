@@ -19,17 +19,14 @@ public class TechnicianMove implements Move {
         this.technician = technician;
     }
 
-    @Override
     public boolean isMoveDoable(WorkingMemory workingMemory) {
         return !serviceRequest.getTechnician().equals(technician);
     }
 
-    @Override
     public Move createUndoMove(WorkingMemory workingMemory) {
         return new TechnicianMove(serviceRequest, serviceRequest.getTechnician());
     }
 
-    @Override
     public void doMove(WorkingMemory workingMemory) {
         FactHandle serviceRequestHandle = workingMemory.getFactHandle(serviceRequest);
         serviceRequest.setTechnician(technician);
